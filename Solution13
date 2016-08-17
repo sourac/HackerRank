@@ -1,0 +1,40 @@
+class Student extends Person{
+	private int[] testScores;
+  
+    Student(String firstName,String lastName,int id,int[] scores){
+       super(firstName,lastName,id);
+        testScores=scores;
+        
+    }
+            int sum=0;
+    float avg=0;
+            char grade;
+            public char calculate(){
+                for(int i=0;i<testScores.length;i++){
+                    sum+=testScores[i];
+                       int num=testScores.length;
+                avg=sum/num;
+                if(avg>=90 && avg<=100){
+                        grade='O';
+                }
+                else if(avg>=80 && avg<90){
+                    grade='E';
+                }
+                else if(avg>=70 && avg<80){
+                    grade='A';
+                }
+                else if(avg>=55 && avg<70)
+                    {
+                    grade='P';
+                }
+                else if(avg>=40 && avg<55){
+                    grade='D';
+                }
+                else{
+                    grade='T';
+                }
+                
+                }
+                return grade;
+            }
+}
