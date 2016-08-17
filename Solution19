@@ -1,0 +1,20 @@
+public class Solution {
+    // Write your code here
+Stack<Character> stack = new Stack();
+    Queue<Character> queue = new LinkedList();
+    
+    void pushCharacter(char ch){
+        stack.add(ch);
+    }
+    
+    char popCharacter(){
+        return stack.pop();
+    }
+    
+    void enqueueCharacter(char ch){
+        queue.add(ch);
+    }
+    
+    char dequeueCharacter(){
+        return queue.remove();
+    }
